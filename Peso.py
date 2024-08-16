@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Carregar o arquivo Excel
-df = pd.read_excel('C:\\Users\\humbe\\OneDrive\\Documentos\\GitHub\\Estatistica\\base_dados_aulas24-2.xlsx')
+df = pd.read_excel('C:\\Users\\humbe\\OneDrive\\Documentos\\GitHub\\Estatistica-2024\\base_dados_aulas24-2.xlsx')
 
 # Contar as ocorrências de cada peso
 contagem_peso = df['Peso'].value_counts().sort_index()
