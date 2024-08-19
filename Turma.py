@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# OBS, ALLTERAR O CAMINHO DO ARQUIVO PARA ONDE SE ENCONTRA
+# A BASE DE DADOS DAS AULAS
+
 # Carregar o arquivo Excel
 df = pd.read_excel('C:\\Users\\humbe\\OneDrive\\Documentos\\GitHub\\Estatistica-2024\\base_dados_aulas24-2.xlsx')
 
@@ -35,6 +38,7 @@ ax.legend(
 
 tabela_frequencia = df['Turma'].value_counts().reset_index()
 tabela_frequencia.columns = ['Turma', 'Frequência']
+tabela_frequencia['Frequência Relativa'] = (tabela_frequencia['Frequência'] / total).astype(str)
 tabela_frequencia['Porcentagem'] = (tabela_frequencia['Frequência'] / total * 100).astype(str) + "%"
 print(tabela_frequencia.to_string(index=False))
 print('\nTotal de alunos:', tabela_frequencia['Frequência'].sum())
